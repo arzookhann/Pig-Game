@@ -43,13 +43,13 @@ const startGame = function () {
 // Function to reset the dice image to default one
 const resetDice = function () {
   diceEl.classList.remove("rolled-dice");
-  diceEl.src = `/dice/dice.png`;
+  diceEl.src = `dice/dice.png`;
 };
 
 // Function to display the rolled dice number image
 const displayDice = function (dice) {
   diceEl.classList.add("rolled-dice");
-  diceEl.src = `/dice/dice-${dice}.png`;
+  diceEl.src = `dice/dice-${dice}.png`;
 };
 
 // Function to switch the current player
