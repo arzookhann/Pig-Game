@@ -25,7 +25,7 @@ const btnStartGame = document.querySelector("#btn-start-game");
 const getPlayerNameModal = document.querySelector(".get-player-name");
 const overlayEl = document.querySelector(".overlay");
 
-let currentScore, activePlayer, scores = [];
+let currentScore = 0, activePlayer = 0, scores = [];
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // Used Functions
@@ -65,7 +65,7 @@ const switchPlayer = function () {
 
 // Function to set up initial conditions before starting the new game or reloading the page
 const initializeGame = function () {
-  playersEl[activePlayer].classList.remove("player--winner");
+  document.querySelector(`#win-${activePlayer}`).classList.add("hidden");
   activePlayer = 0;
   playerNamesEl[0].textContent = "Player 1";
   playerNamesEl[1].textContent = "Player 2";
@@ -83,7 +83,6 @@ const initializeGame = function () {
 
   playersEl[1].classList.remove("player--active");
   playersEl[0].classList.add("player--active");
-  document.querySelector(`#win-${activePlayer}`).classList.add("hidden");
   getPlayerNameModal.classList.remove("hidden");
   overlayEl.classList.remove("hidden");
   resetDice();
