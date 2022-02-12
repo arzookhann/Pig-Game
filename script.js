@@ -64,8 +64,9 @@ const switchPlayer = function () {
 };
 
 // Function to set up initial conditions before starting the new game or reloading the page
-const initializeGame = function () {console.log("here");
-activePlayer = 0;
+const initializeGame = function () {
+  playersEl[activePlayer].classList.remove("player--winner");
+  activePlayer = 0;
   playerNamesEl[0].textContent = "Player 1";
   playerNamesEl[1].textContent = "Player 2";
 
@@ -80,8 +81,6 @@ activePlayer = 0;
   btnRoll.classList.remove("hidden");
   btnHold.classList.remove("hidden");
 
-  playersEl[0].classList.remove("player--winner");
-  playersEl[1].classList.remove("player--winner");
   playersEl[1].classList.remove("player--active");
   playersEl[0].classList.add("player--active");
   document.querySelector(`#win-${activePlayer}`).classList.add("hidden");
