@@ -81,8 +81,10 @@ const initializeGame = function () {
   btnRoll.classList.remove("hidden");
   btnHold.classList.remove("hidden");
 
-  playersEl[1].classList.remove("player--active");
   playersEl[0].classList.add("player--active");
+  playersEl[1].classList.remove("player--active");
+  playersEl[0].classList.remove("player--winner");
+  playersEl[1].classList.remove("player--winner");
   getPlayerNameModal.classList.remove("hidden");
   overlayEl.classList.remove("hidden");
   resetDice();
