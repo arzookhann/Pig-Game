@@ -26,7 +26,7 @@ body {
 main {
   position: relative;
   width: 100rem;
-  height: 60rem;
+  height: 55rem;
   background-color: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(200px);
   filter: blur();
@@ -132,10 +132,10 @@ main {
   top: 4rem;
 }
 .btn--roll {
-  top: 39.3rem;
+  top: 39rem;
 }
 .btn--hold {
-  top: 46.1rem;
+  top: 46rem;
 }
 
 .btn:active {
